@@ -13,22 +13,24 @@ elif op == '*':
 elif op == '/':
 	ans = float(x)/float(y)
 	print('the answer is: ', ans)
-b = ans
-z = input('do u want to continue calculating with the answer (yes/no): ')
-if z == 'yes':
-	w = input('please input the no. : ')
+else:
+	print('thankyou.')
+answer_stored = ans
+further_continue  = input('do u want to continue calculating with the answer (yes/no): ')
+if further_continue == 'yes':
+	z = input('please input the next no. : ')
 	op2 = input('what operation would u like (+, -, *, /) :')
 	if op2 == '+':
-		c = b+float(w)
-		print('the answer is: ', c)
+		ans2 = answer_stored+float(z)
+		print('the answer is: ', ans2)
 	elif op2 == '-':
-		c = b-float(w)
-		print('the answer is: ', c)
+		ans2 = answer_stored-float(z)
+		print('the answer is: ', ans2)
 	elif op2 == '*':
-		c = b*float(w)
-		print('the answer is: ', c)
+		ans2 = answer_stored*float(z)
+		print('the answer is: ', ans2)
 	elif op2 == '/':
-		c = b/float(w)
-		print('the answer is: ', c)
-if z == 'no':
+		ans2 = answer_stored/float(z)
+		print('the answer is: ', ans2)
+else:
 	print('thankyou.')
